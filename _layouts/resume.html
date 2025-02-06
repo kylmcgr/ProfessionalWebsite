@@ -1,0 +1,39 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+    {% include navbar.html %}
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered" id="resume">
+                <div class="section">
+                    <figure class="image">
+                        <img class="is-rounded" src="{{site.author-image}}" alt="{{site.author-name}}">
+                    </figure>
+                    <br>
+                    <h1 class="title is-1 has-text-weight-bold">
+                        {{site.author-name}}
+                    </h1>
+                    <hr class="has-background-black">
+                    <h3 class="title is-3">
+                        {{site.author-about-short}}
+                    </h3>
+                    <br>
+                    <div class="content is-marginless">
+                        {{ content }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer begins here-->
+    {% include footer.html %}
+</body>
+
+</html>
